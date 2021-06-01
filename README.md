@@ -1,2 +1,3 @@
-# VueWebCloneUofA
-clone U of A website with Vue
+# Vue3WebCloneUofA
+## Week1 Day1
+1. learn Vue && build basic folder structure
