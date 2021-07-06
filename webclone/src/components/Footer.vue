@@ -105,12 +105,17 @@
         </div>
     </div>
     <div class="footer-address">
-			<p>
-				<span>©2021 University of Alberta 116 St. and 85 Ave., Edmonton, AB, Canada T6G 2R3
-				</span>
-				<span>We are located on Treaty 6 / Métis Territory.</span>
-			</p>
-		</div> 
+		<p>
+			<span>©2021 University of Alberta 116 St. and 85 Ave., Edmonton, AB, Canada T6G 2R3
+			</span>
+			<span>We are located on Treaty 6 / Métis Territory.</span>
+		</p>
+	</div>
+    <input v-model="message" placeholder="edit me" />
+    <p>Message is: {{ message }}</p>
+    <button @click="submit">
+    <slot>Submit</slot>
+    </button>
 </div>  
 </template>
 <script>
@@ -126,10 +131,24 @@ export default {
         const weatherTemp = ref(parseInt(datas.main.temp - kelvin));
         const weatherDescription = ref(datas.weather[0].description);
         const weatherFeel = ref(parseInt(datas.main.feels_like - kelvin));
+        const message = ref('');
+        function submit() {
+                    //向服务器提交数据
+                    axios.get('http://127.0.0.1:3000/')
+                        .then(function(response) {
+                            //成功时服务器返回 response 数据
+                            alert(response.data)
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        });
+                }
         return{
             weatherTemp,
             weatherDescription,
-            weatherFeel
+            weatherFeel,
+            message,
+            submit
         }
     },
 }

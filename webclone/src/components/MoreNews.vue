@@ -83,9 +83,20 @@
 </template>
 <script>
 import axios from 'axios'
-import { computed, ref } from '@vue/runtime-core';
+import { computed, ref, onMounted } from 'vue';
 export default {
     async setup() {
+         // mounted
+        onMounted(() => {
+            axios.get('http://127.0.0.1:3000/')
+            .then(function(response) {
+              //成功时服务器返回 response 数据
+              alert(response.data)
+            })
+            .catch(function(error) {
+              console.log(error);
+            });
+        })
         let datas = [];
         await axios.get('./data/data.json').then((res) => {
         datas = res.data;

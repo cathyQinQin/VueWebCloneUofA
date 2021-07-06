@@ -26,6 +26,7 @@ import LastestNews from './components/LastestNews'
 import MoreNews from'./components/MoreNews'
 import ExploreCampus from'./components/ExploreCampus'
 import Footer from'./components/Footer'
+import{onMounted} from "vue"
 export default {
   name: 'App',
   components: {
@@ -38,6 +39,12 @@ export default {
     MoreNews,
     ExploreCampus,
     Footer,
+  },
+  setup() {
+    // mounted
+    onMounted(() => {
+      console.log('Component is mounted!')
+    })
   }
 }
 </script>

@@ -13,7 +13,7 @@
                     <div class="image-bottom"></div>
                 </div>
                 <h4 class="story-title">
-                <a class="stretched-link" href="https://www.ualberta.ca/equity-diversity-inclusivity/initiatives/national-indigenous-history-month.html">
+                <a class="story-link" href="https://www.ualberta.ca/equity-diversity-inclusivity/initiatives/national-indigenous-history-month.html">
                     National Indigenous History Month 
                 </a>
                 </h4>
@@ -31,7 +31,7 @@
                     <div class="image-bottom"></div>
                 </div>
                 <h4 class="story-title">
-                <a class="stretched-link" href="https://www.ualberta.ca/folio/2021/06/engaging-in-ethical-community-based-research-congress-2021-session-helps-researchers-practise-indigenous-engaged-scholarship.html">
+                <a class="story-link" href="https://www.ualberta.ca/folio/2021/06/engaging-in-ethical-community-based-research-congress-2021-session-helps-researchers-practise-indigenous-engaged-scholarship.html">
                     From the President's Desk: Honouring National Indigenous History Month 
                 </a>
                 </h4>
@@ -123,12 +123,12 @@
         font-size: 1.25rem;
         font-family: 'Merriweather', serif;
     }
-    .story-container .stretched-link{
+    .story-container .story-link{
         text-decoration: none;
         color: #11151c;
         transition: color 1.2s;
     }
-    .story-container .stretched-link:hover{
+    .story-container .story-link:hover{
         color:#007c41;
     }
     .story-container .story-date{
